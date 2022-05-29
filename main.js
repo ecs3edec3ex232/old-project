@@ -15,7 +15,7 @@ function take_snapshot(){
 }
 
 console.log("ml5 version:",ml5.version);
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/-ynmkcqQ7/model.json',modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/QfS7UEUwZ/model.json',modelLoaded);
 
 function modelLoaded(){
     console.log('modelLoaded');
@@ -49,25 +49,25 @@ function gotResult(error, results){
         prediction2 = results[1].label;
         speak();
 
-        if (results[0].label == "happy"){
-            document.getElementById("updating_emoji").innerHTML = '&#128512;';
+        if (results[0].label == "Amazing"){
+            document.getElementById("updating_emoji").innerHTML = '&#128076;'
         }
-        if (results[0].label == "sad"){
-            document.getElementById("updating_emoji").innerHTML = '&#128553;';
+        if (results[0].label == "Good"){
+            document.getElementById("updating_emoji").innerHTML = '&#128075;'
         }
-        if (results[0].label == "terrified"){
-            document.getElementById("updating_emoji").innerHTML = '&#128552;';
+        if (results[0].label == "Peace"){
+            document.getElementById("updating_emoji").innerHTML = '&#9996;'
         }
 
-
-        if (results[1].label == "happy"){
-            document.getElementById("updating_emoji").innerHTML = '&#128512;';
+        if (results[1].label == "Amazing"){
+            document.getElementById("updating_emoji").innerHTML = '&#128076;'
         }
-        if (results[1].label == "sad"){
-            document.getElementById("updating_emoji").innerHTML = '&#128553;';
+        if (results[1].label == "Good"){
+            document.getElementById("updating_emoji").innerHTML = '&#128075;'
         }
-        if (results[1].label == "terrified"){
-            document.getElementById("updating_emoji").innerHTML = '&#128552;';
+        if (results[1].label == "Peace"){
+            document.getElementById("updating_emoji").innerHTML = '&#9996;'
         }
+       
     }
 }
